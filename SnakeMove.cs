@@ -51,6 +51,7 @@ public class SnakeMove : MonoBehaviour
     {
         Transform circle = Instantiate(SnakeHead, positions[positions.Count - 1], Quaternion.identity, transform);
         circle.GetComponent<MeshRenderer>().material.color = PlatformController.s.colors[0];
+        GameController.s.currCollorSnake = PlatformController.s.colors[0];
         snakeCircles.Add(circle);
         positions.Add(circle.transform.position);
     }
